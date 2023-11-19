@@ -1,25 +1,32 @@
-import {Carousel} from "react-bootstrap";
+import React from "react";
+import { Container, Row, Col, Image } from "react-bootstrap";
+import Image1 from "./../assets/nana.jpg";
+import Image2 from "./../assets/HasnaHome1.png";
+import { Carousel } from "react-bootstrap";
 import hero1 from "./../assets/GedungIsola.jpg";
 import hero2 from "./../assets/museum.jpeg";
 
 const Hero = () => {
   return (
-    <Carousel>
-      <Carousel.Item>
-        <img className="d-block w-100" src={hero1} alt="First slide" />
-        <Carousel.Caption>
-          <h3>Isola Building</h3>
-          <p>The Isola building is located on the Indonesian University of Education campus which is the hallmark of the campus</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-        <img className="d-block w-100" src={hero2} alt="Second slide" />
-        <Carousel.Caption>
-          <h3>UPI Museum</h3>
-          <p>This is an UPI Museum which contains historical objects with educational themes.</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-    </Carousel>
+    <main className="flex-shrink-0">
+      <div>
+        <Container>
+          <Row className="align-items-center justify-content-center"> {/* Menggunakan justify-content-center */}
+            <Col>
+              <div className="text-center">
+                <h3>Hallo! My Name is Hasna</h3>
+                <p>Hello! I am Hasna Nabhan, the founder and creator behind this website. I want to share a little about myself</p>
+              </div>
+            </Col>
+            <Col className="text-center">
+              <div className="d-flex justify-content-center align-items-center"> {/* Menggunakan d-flex, justify-content-center, align-items-center */}
+                <Image src={Image2} roundedCircle alt="Foto Profil" width={500} height={500} />
+              </div>
+            </Col>
+          </Row>
+        </Container>
+      </div>
+    </main>
   );
 };
 
